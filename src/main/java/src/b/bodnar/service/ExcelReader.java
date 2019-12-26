@@ -1,10 +1,11 @@
 package src.b.bodnar.service;
 
-import org.apache.poi.ss.usermodel.*;
+import org.apache.poi.ss.usermodel.Row;
+import org.apache.poi.ss.usermodel.Sheet;
+import org.apache.poi.ss.usermodel.Workbook;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 import src.b.bodnar.model.Apartment;
 import src.b.bodnar.model.Person;
-
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
@@ -21,7 +22,6 @@ public class ExcelReader {
         try (FileInputStream excelFile = new FileInputStream(file)) {
             Workbook workbook = new XSSFWorkbook(excelFile);
             Sheet sheet = workbook.getSheetAt(0);
-
             for (Row row : sheet) {
                 if (row.getCell(0) == null) {
                     return persons;

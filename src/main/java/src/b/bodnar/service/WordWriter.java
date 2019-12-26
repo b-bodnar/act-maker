@@ -18,7 +18,7 @@ public class WordWriter {
 
     public void createDoc(String template, @NonNull List<Person> persons) {
         File folderForActs = createFolder();
-        Docx act = null;
+        Docx act;
         try {
             for (Person person : persons) {
                 act = new Docx(template);
@@ -70,7 +70,7 @@ public class WordWriter {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd");
         String currentDate = dateFormat.format(calendar.getTime());
         File folderForActs = new File(desktop.getAbsolutePath() + File.separator + currentDate);
-        if(folderForActs.exists()){
+        if (folderForActs.exists()) {
             folderForActs.delete();
         }
         folderForActs.mkdir();
