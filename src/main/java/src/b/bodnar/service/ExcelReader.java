@@ -51,8 +51,8 @@ public class ExcelReader {
     private static Person createPerson(Row row) {
         Person person = new Person();
         person.setFullName(row.getCell(6).toString());
-        person.setAddress(row.getCell(7).toString());
-        person.setPassport(row.getCell(8).toString());
+        person.setPassport(row.getCell(7).toString());
+        person.setAddress(row.getCell(8).toString());
         person.setTaxID(format(row.getCell(9).getNumericCellValue()));
         return person;
     }

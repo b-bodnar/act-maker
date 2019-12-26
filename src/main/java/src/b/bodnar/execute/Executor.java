@@ -10,7 +10,7 @@ import java.util.List;
 public class Executor {
 
     private static final String PATH_TO_DIRECTORY = "C:/Users/b.bodnar/Desktop/work/Act_Maker/files/";
-    private static final String PATH_TO_TEMPLATE = "C:/Users/b.bodnar/Desktop/template.docx";
+    private static final String PATH_TO_TEMPLATE = "C:/Users/b.bodnar/Desktop/work/Act_Maker/files/template/template.docx";
 
     public static void execute(String srcFileName) {
         File src = new File(PATH_TO_DIRECTORY + srcFileName);
